@@ -12,7 +12,7 @@ namespace ProblematicProblem
         Random rng;        
         static bool cont = true;
 
-    internal static List<string> activities = new List<string>()
+    public static List<string> activities = new List<string>()
         {"Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing", "Wine Tasting"};
 
         static void Main(string[] args)
@@ -107,8 +107,7 @@ namespace ProblematicProblem
 
                     randomNumber = rng.Next(enumerable.Count);
 
-                    randomActivity = activities{randomNumber}
-
+                    if (activities != null) randomActivity = activities(randomNumber);
                 }
 
                 Console.Write(
@@ -118,4 +117,4 @@ namespace ProblematicProblem
             }
         }
     }
-}}
+}
